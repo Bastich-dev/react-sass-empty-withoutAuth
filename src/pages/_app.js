@@ -1,5 +1,9 @@
+import Header from "@components/layout/Header";
+import Footer from "@components/layout/Footer";
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
+
+import "../styles/global.scss";
 
 function WepApp({ Component, pageProps }) {
   useEffect(() => {
@@ -7,7 +11,13 @@ function WepApp({ Component, pageProps }) {
     TagManager.initialize({ gtmId: google_tag_manager_id });
   }, []);
 
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Header />
+      <Component {...pageProps} />;
+      <Footer />
+    </>
+  );
 }
 
 export default WepApp;

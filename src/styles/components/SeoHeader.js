@@ -1,40 +1,39 @@
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import React from 'react'
-import routes from './routes'
-import EvanisLogo from '@/public/android-chrome-512x512.png'
-import { FRONT_URL } from './constants'
-export default function Helmet() {
-    const router = useRouter()
+import Head from "next/head";
+import { useRouter } from "next/router";
+import React from "react";
+import Logo from "@/public/android-chrome-512x512.png";
+import { CONST_BASE_URL, CONST_TITLE_APP } from "@utils/constants";
 
-    const origin = FRONT_URL
-    const prefix = 'Evanis Admin'
+export default function Helmet({ title, description }) {
+  const router = useRouter();
 
-    const title = routes.find((e) => router.asPath.includes(e.path))?.name
-    const titlePage = prefix + (title ? ' - ' + title : '')
+  const origin = CONST_BASE_URL;
+  const prefix = CONST_TITLE_APP;
 
-    const logo = EvanisLogo
+  const titlePage = prefix + (title ? " - " + title : "");
+  const decriptionPage = description;
+  const logo = Logo;
 
-    return (
-        <Head>
-            <title>{titlePage}</title>
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  return (
+    <Head>
+      <title>{titlePage}</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
-            <meta name="twitter:title" content={titlePage} />
-            <meta property="og:title" content={titlePage} />
+      <meta name="twitter:title" content={titlePage} />
+      <meta property="og:title" content={titlePage} />
 
-            <meta name="description" content={titlePage} />
-            <meta name="twitter:description" content={titlePage} />
-            <meta property="og:description" content={titlePage} />
+      <meta name="description" content={decriptionPage} />
+      <meta name="twitter:description" content={decriptionPage} />
+      <meta property="og:description" content={decriptionPage} />
 
-            <meta property="og:site_name" content={prefix} />
-            <meta property="og:type" content="website" />
-            <meta property="og:url" content={origin + router.asPath} />
-            <meta property="og:image" content={logo.src} />
+      <meta property="og:site_name" content={prefix} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={origin + router.asPath} />
+      <meta property="og:image" content={logo.src} />
 
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content={logo.src} />
-            <link rel="apple-touch-icon" href={logo.src} />
-        </Head>
-    )
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={logo.src} />
+      <link rel="apple-touch-icon" href={logo.src} />
+    </Head>
+  );
 }
