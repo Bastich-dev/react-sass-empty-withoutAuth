@@ -1,0 +1,22 @@
+FROM node:16-alpine
+
+# CATCH BUILD ARGS TO SET ENV FOR BUILD
+ARG NODE_ENV
+ENV NODE_ENV $NODE_ENV
+
+# Disable next.js telemetry
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Create app directory
+RUN mkdir -p /code
+
+# Copying source files
+COPY ./front/ /code/
+COPY ./front/package*.json /code/
+
+WORKDIR /code
+
+# Installing dependencies
+RUN npm install
+
+# Start command run by docker-compose

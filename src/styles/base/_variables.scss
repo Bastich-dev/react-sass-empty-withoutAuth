@@ -1,0 +1,61 @@
+/* Variables
+** ============================== */
+
+/* Colors */
+$color-primary: #ff0000;
+$color-secondary: #00ff00;
+
+$color-dark: $md-grey-900;
+$color-white: #fff;
+$color-disabled: silver;
+
+$color-success: $md-green-500;
+$color-danger: $md-red-500;
+$color-warning: $md-orange-500;
+$color-info: $md-cyan-500;
+$color-light: $md-grey-400;
+
+/* WIREFRAME Vars
+----------------------------------------------------------------------------------- */
+
+$color-variant_1: $md-grey-400;
+
+// background
+$background_color-body: #e9edef;
+$background_color-body_2: #e9edef;
+
+// font
+$color_font-primary: $color-primary;
+$color_font-dark: $color-dark;
+$color_font-white: $color-white;
+$color_font-link: $md-blue-400;
+
+$font_family-primary: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font_family-secondary: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font_family-variant_1: Helvetica, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font_weight_light: 300;
+$font_weight_regular: 500;
+$font_weight_bold: 700;
+
+/* Layout */
+
+// container
+$container-width: 95vw;
+$container-spacing: calc((100vw - 95vw));
+
+// Breakpints
+
+$xl-screen: 1600px;
+$lg-screen: 1200px;
+$md-screen: 992px;
+$sm-screen: 768px;
+$xs-screen: 480px;
+
+:export {
+  xlScreen: $xl-screen;
+  lgScreen: $lg-screen;
+  mdScreen: $md-screen;
+  smScreen: $sm-screen;
+  xsScreen: $xs-screen;
+}

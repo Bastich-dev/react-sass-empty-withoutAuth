@@ -1,0 +1,60 @@
+// .fadeIn {
+//     will-change: opacity;
+//     animation-name: fadeIn;
+//     animation-fill-mode: forwards;
+//     animation-duration: 0.2s;
+//     animation-timing-function: cubic-bezier(0.1, 0.47, 0.59, 1.09);
+// }
+
+// .fadeOut {
+//     opacity: 1;
+//     will-change: opacity;
+//     animation-name: fadeOut;
+//     animation-fill-mode: forwards;
+//     animation-duration: 0.2s;
+//     animation-timing-function: cubic-bezier(0.1, 0.47, 0.59, 1.09);
+// }
+
+// .hidden {
+//     opacity: 0;
+// }
+
+// .visible {
+//     opacity: 1;
+// }
+
+// @keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
+// @-webkit-keyframes fadeIn {
+//     0% {
+//         opacity: 0;
+//     }
+//     100% {
+//         opacity: 1;
+//     }
+// }
+
+// @keyframes fadeOut {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//     }
+// }
+
+// @-webkit-keyframes fadeOut {
+//     0% {
+//         opacity: 1;
+//     }
+//     100% {
+//         opacity: 0;
+//     }
+// }

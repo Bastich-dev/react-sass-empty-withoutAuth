@@ -1,0 +1,29 @@
+# FROM node:16-alpine
+
+# # CATCH BUILD ARGS TO SET ENV FOR BUILD
+# ARG NODE_ENV
+# ENV NODE_ENV $NODE_ENV
+# ARG NEXT_PUBLIC_API_URL
+# ENV NEXT_PUBLIC_API_URL $NEXT_PUBLIC_API_URL
+
+# # Disable next.js telemetry
+# ENV NEXT_TELEMETRY_DISABLED 1
+
+# # Create app directory
+# RUN mkdir -p /code
+# RUN mkdir -p /common
+
+# # Copying source files
+# COPY ./admin/ /code/
+# COPY ./common/ /common/
+# COPY ./admin/package*.json /code/
+
+# WORKDIR /code
+
+# # Installing dependencies
+# RUN npm install
+
+# # Building the app
+# RUN npm run build
+
+# # Start command run by docker-compose

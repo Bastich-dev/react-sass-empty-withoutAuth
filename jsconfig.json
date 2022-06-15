@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      // Base Aliases
+      "@public/*": ["./public/*"],
+      "@components/*": ["./src/components/*"],
+      "@api/*": ["./src/api/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@utils/*": ["./src/utils/*"],
+
+      // Shortcut Aliases
+      "@@icons/*": ["./src/assets/icons/*"],
+      "@@brands/*": ["./src/assets/brands/*"],
+      "@@banners/*": ["./src/assets/banners/*"],
+      "@@content/*": ["./src/assets/content/*"],
+      "@@pictos/*": ["./src/assets/pictos/*"]
+
+      // Custom Aliases
+      // "@@@__CUSTOM__/*": ["./src/components/__CUSTOM__/*"]
+    }
+    // "esModuleInterop": true,
+    // "module": "commonjs",
+    // "jsx": "preserve",
+    // "lib": ["es2017", "dom", "esnext", "webworker"],
+    // "sourceMap": true,
+    // "target": "es6",
+    // "noUnusedLocals": true,
+    // "resolveJsonModule": true,
+    // "skipLibCheck": true,
+    // "allowJs": true,
+    // "strict": false,
+    // "forceConsistentCasingInFileNames": true,
+    // "noEmit": true,
+    // "moduleResolution": "node",
+    // "isolatedModules": true
+  }
+  // "exclude": ["node_modules"],
+  // "include": [ "**/*.js"]
+}

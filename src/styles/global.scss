@@ -1,0 +1,58 @@
+/*
+ * Réseau Funéraire Web App Styles
+ *
+ * Authors: Emendo
+ * Version: 0.0.1
+**/
+
+/* General
+----------------------------------------------------------------------------------- */
+
+html {
+}
+body {
+}
+
+/* FOR DEBUG */
+// *{
+// border: 1px solid red
+// }
+
+/* Base
+----------------------------------------------------------------------------------- */
+
+// @import "base/colorsBank";
+@import "base/variables";
+@import "base/mixins";
+@import "base/depedencies";
+@import "base/animations";
+
+/* Layout
+----------------------------------------------------------------------------------- */
+@import "layout/main";
+@import "layout/header";
+@import "layout/footer";
+
+/* Content
+----------------------------------------------------------------------------------- */
+
+@import "content/container";
+@import "content/title";
+@import "content/text";
+@import "content/spacer";
+@import "content/form";
+@import "content/list";
+@import "content/image";
+@import "content/table";
+
+/* Components
+----------------------------------------------------------------------------------- */
+// @import 'components/__COMPONENTNAME__';
+
+/* Specific Page Components
+----------------------------------------------------------------------------------- */
+// @import 'pages/__PAGENAME__/__COMPONENTNAME__';
+
+/* Responsive
+----------------------------------------------------------------------------------- */
+@import "base/responsive";

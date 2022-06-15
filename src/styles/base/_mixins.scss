@@ -1,0 +1,68 @@
+/* Default animations
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+// generic transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+// rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+// translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+// skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//transform origin
+@mixin transform-origin($origin) {
+  moz-transform-origin: $origin;
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+
+// Set animation mode
+@mixin animate($t: 0.5s) {
+  transition: all $t ease;
+}
+
+/* Custom animations animations
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+@mixin scale-anim() {
+  @include b_animated();
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* Mixin Font
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ */
+@mixin b_font-size($desktop-size, $responsive-size) {
+  $rWidth: $sm-screen;
+  $dWidth: $lg-screen;
+  $cWidth: 100vw;
+
+  font-size: calc($responsive-size + ($desktop-size - $responsive-size) / 2);
+
+  @media (min-width: $lg-screen) {
+    font-size: $desktop-size;
+  }
+  @media (max-width: $sm-screen) {
+    font-size: $responsive-size;
+  }
+}
